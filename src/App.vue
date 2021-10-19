@@ -1,15 +1,57 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Todos v-bind:todos="todos" />
+    <AddTodo
+      v-on:add-todo="addTodo"
+      />
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos';
+import AddTodo from './components/AddTodo';
+import bus from './main'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Todos,
+    AddTodo
+    },
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: 'Go workout',
+          completed: false
+        },
+        {
+          id: 2,
+          title: 'Go to LaMassacre',
+          completed: false
+        },
+        {
+          id: 3,
+          title: 'Ship grocery store',
+          completed: false
+        },
+      ]
+    }
+  },
+  methods: {
+    addTodo(newTodoObj) {
+      this.todos = [...this.todos, newTodoObj];
+    },
+    deleteTodo(todo) {
+      console.log(todo)
+    }
+  },
+  created (){
+    bus.$on('deletetodo', (todo) => {
+      this.todos = this.todos.filter(item => item.id !== todo.id)
+    })
   }
 }
 </script>
@@ -17,10 +59,5 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

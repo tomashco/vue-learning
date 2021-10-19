@@ -1,6 +1,25 @@
 # vue-learning
+A simple Todo App for learning the basic principles of Vue
 
-## Project setup
+Things I've learned so far, in order of difficulty:
+
+- Installing VueJS globally;
+- Creating a project with ```vue create vue-learning```;
+- The folder structure of a vue app;
+- The file structure of a component (template, script, style);
+- Fuelling the app components with dummy data (i.e. an array of todo items);
+- displaying a list of components (v-for);
+- passing props to components;
+- creating a new todo using events (this.$emit);
+- exchanging events between components which are more distant than parent/child (tricky with Vue3 -> tiny-emitter to the rescue!);
+- ...
+
+Future topics:
+- adding style to components (maybe with tailwind-css);
+- increase knowledge on event handling between components;
+- ...
+
+### Project setup
 ```
 yarn install
 ```
@@ -9,16 +28,3 @@ yarn install
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
