@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div class="w-64 bg-gradient-to-br from-yellow-500 via-red-500 to-pink-500" id="app">
+    <!-- bg-gradient-to-br   -->
     <Todos v-bind:todos="todos" />
     <AddTodo
       v-on:add-todo="addTodo"
@@ -12,6 +13,7 @@
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import bus from './main'
+import './assets/tailwind.css';
 
 export default {
   name: 'App',

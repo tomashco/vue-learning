@@ -1,5 +1,5 @@
 <template>
-  <li v-bind:class="{ 'completed': completed }">
+  <li class="" v-bind:class="{ 'completed': completed }">
     <p @click="toggleComplete">{{title}}</p>
     <span
     @click="deleteTodo"

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import emitter from 'tiny-emitter/instance'
+import './assets/tailwind.css'
 
 export default {
   $on: (...args) => emitter.on(...args),
