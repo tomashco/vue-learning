@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-8 bg-gray-50 bg-opacity-70 p-4 rounded-2xl">
     <h2>My todolist</h2>
     <ul>
         <Todo

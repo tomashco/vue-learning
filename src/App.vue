@@ -1,10 +1,12 @@
 <template>
-  <div class="w-64 bg-gradient-to-br from-yellow-500 via-red-500 to-pink-500" id="app">
+  <div class="flex flex-col h-screen items-center justify-center bg-gradient-to-br from-yellow-500 via-red-500 to-pink-500" id="app">
     <!-- bg-gradient-to-br   -->
-    <Todos v-bind:todos="todos" />
-    <AddTodo
-      v-on:add-todo="addTodo"
-      />
+    <div class="flex flex-col w-1/2">
+      <Todos v-bind:todos="todos" />
+      <AddTodo
+        v-on:add-todo="addTodo"
+        />
+    </div>
   </div>
 
 </template>
