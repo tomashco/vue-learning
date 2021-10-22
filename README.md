@@ -1,4 +1,7 @@
 # vue-learning
+
+Demo: [http://tomashco.github.io/vue-learning](tomashco.github.io/vue-learning)
+
 A simple Todo App for learning the basic principles of Vue
 
 Things I've learned so far, in order of difficulty:
