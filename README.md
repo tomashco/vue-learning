@@ -1,6 +1,6 @@
 # vue-learning
 
-Demo: [http://tomashco.github.io/vue-learning](tomashco.github.io/vue-learning)
+Demo: [tomashco.github.io/vue-learning](http://tomashco.github.io/vue-learning)
 
 A simple Todo App for learning the basic principles of Vue
 
