@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-8 bg-gray-50 bg-opacity-70 p-4 rounded-2xl">
+  <div class="shadow-2xl mb-8 bg-gray-50 bg-opacity-70 p-4 rounded-2xl">
     <form class="flex flex-row justify-between" @submit="addTodo">
-      <input class="rounded-xl w-2/3" type="text" v-model="title" name="title">
+      <input class="px-4 shadow-inner rounded-xl w-2/3" type="text" v-model="title" name="title">
       <button class="cursor-pointer btn btn-blue" type="submit">Add</button>
     </form>
   </div>

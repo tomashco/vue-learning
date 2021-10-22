@@ -1,8 +1,10 @@
 <template>
-  <li class="flex flex-row justify-between" v-bind:class="{ 'completed': completed }">
-    <p @click="toggleComplete">{{title}}</p>
+  <li class="flex flex-row justify-between">
+    <p
+    v-bind:class="{ 'completed': completed }"
+    @click="toggleComplete">{{title}}</p>
     <span
-    class="cursor-pointer"
+    class="cursor-pointer text-red-500 font-bold"
     @click="deleteTodo"
     >X</span>
   </li>

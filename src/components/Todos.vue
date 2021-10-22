@@ -1,6 +1,5 @@
 <template>
-  <div class="mb-8 bg-gray-50 bg-opacity-70 p-4 rounded-2xl">
-    <h2>My todolist</h2>
+  <div class="shadow-2xl mb-8 bg-gray-50 bg-opacity-70 p-4 rounded-2xl">
     <ul>
         <Todo
         v-for="todo in todos"
