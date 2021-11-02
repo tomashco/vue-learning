@@ -18,9 +18,11 @@ export default {
   components: {
     Todo
   },
-  props: [
-    "todos"
-  ]
+  computed: {
+    todos () {
+        return this.$store.state.todos
+      }
+  }
 }
 </script>
 

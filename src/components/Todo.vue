@@ -1,33 +1,29 @@
 <template>
   <li class="flex flex-row justify-between">
     <p
+    class="flex-grow"
     v-bind:class="{ 'completed': completed }"
     @click="toggleComplete">{{title}}</p>
     <span
-    class="cursor-pointer text-red-500 font-bold"
+    class="cursor-pointer text-red-500 font-bold text-lg"
     @click="deleteTodo"
-    >X</span>
+    >x</span>
   </li>
 </template>
 
 <script>
-import bus from '../main'
-
 export default {
   name: 'Todo',
   props: ["todo"],
   data() {
-    return {
-      title: this.todo.title,
-      completed: this.todo.completed
-    }
+    return this.todo
   },
   methods: {
     toggleComplete() {
-      this.completed = !this.completed
+      this.$store.commit('toggleTodo',this.todo)
       },
       deleteTodo() {
-        bus.$emit('deletetodo', {...this.todo})
+        this.$store.commit('deleteTodo', this.todo)
       }
     },
   }

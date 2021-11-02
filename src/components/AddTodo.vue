@@ -26,8 +26,7 @@ export default {
         title: this.title,
         completed: false
       }
-
-      this.$emit('add-todo', newTodoObj);
+      newTodoObj.title && this.$store.commit('addTodo', newTodoObj)
       this.title = '';
     }
   }
